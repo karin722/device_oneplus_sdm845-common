@@ -44,7 +44,11 @@ import org.lineageos.device.DeviceSettings.FileUtils;
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
+    public static final String KEY_DC_SWITCH = "dc";
+    public static final String KEY_DCI_SWITCH = "dci";
+    public static final String KEY_WIDE_SWITCH = "wide";
 
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     private VibratorStrengthPreference mVibratorStrength;
@@ -54,6 +58,7 @@ public class DeviceSettings extends PreferenceFragment
     private VibratorNotifStrengthPreference mVibratorNotifStrength;
 
     private static TwoStatePreference mHBMModeSwitch;
+    private static TwoStatePreference mDCModeSwitch;
     private ListPreference mTopKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mBottomKeyPref;
@@ -88,6 +93,10 @@ public class DeviceSettings extends PreferenceFragment
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
         mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
 
+        mDCModeSwitch = (TwoStatePreference) findPreference(KEY_DC_SWITCH);
+        mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
+        mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
     }
 
     @Override
