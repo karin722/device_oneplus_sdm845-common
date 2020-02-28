@@ -148,18 +148,8 @@ PRODUCT_PACKAGES += \
     power.qcom:64
 
 # Prebuilts
-PRODUCT_PACKAGES += \
-    OnePlusCamera \
-    OnePlusGallery \
-    OnePlusCameraService
-
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
-    $(LOCAL_PATH)/prebuilts/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml:system/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml
-
-# Recorder
-PRODUCT_PACKAGES += \
-    Recorder
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
