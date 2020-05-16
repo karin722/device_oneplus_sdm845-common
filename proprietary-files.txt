@@ -1,3 +1,5 @@
+# All unpinned blobs below are extracted from OnePlus6Oxygen_22_OTA_042_all_1912142031_0fb330
+
 # ANT+
 -lib/libantradio.so
 -lib64/libantradio.so
@@ -52,8 +54,6 @@ lib/libmmosal.so
 lib/libmmparser_lite.so
 lib/libOmxMux.so
 lib64/libmmosal.so
--vendor/lib/libplatformconfig.so
--vendor/lib64/libplatformconfig.so
 
 # NFC
 -app/NxpNfcNci/NxpNfcNci.apk|683f26e17a1e3547a821925e8a212720cb4992f6
